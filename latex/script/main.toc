@@ -1,19 +1,13 @@
 \babel@toc {polish}{}\relax 
-\contentsline {section}{Wprowadzenie}{4}{section*.3}%
-\contentsline {section}{\numberline {1}Podstawy teoretyczne: System operacyjny}{4}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Czym jest system operacyjny?}{4}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Serce systemu, czyli jądro (kernel)}{4}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Dwa światy: Linux vs. Windows}{4}{subsection.1.3}%
-\contentsline {subsubsection}{\numberline {1.3.1}Porównanie jąder systemowych}{4}{subsubsection.1.3.1}%
-\contentsline {subsubsection}{\numberline {1.3.2}Zalety i wady obu systemów}{4}{subsubsection.1.3.2}%
-\contentsline {subsubsection}{\numberline {1.3.3}Przykłady wykorzystania}{5}{subsubsection.1.3.3}%
-\contentsline {subsection}{\numberline {1.4}Świat Linuksa: Dystrybucje}{5}{subsection.1.4}%
-\contentsline {section}{\numberline {2}Podstawowe komendy w systemie Linux}{5}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Powłoka systemowa: Bash}{5}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Struktura poleceń: opcje i argumenty}{6}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Polecenia informacyjne}{6}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Nawigacja i listowanie plików}{7}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Zarządzanie plikami i katalogami}{7}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Przeglądanie i przetwarzanie plików}{8}{subsection.2.6}%
-\contentsline {subsubsection}{\numberline {2.6.1}Wyszukiwanie tekstu: polecenie \texttt {grep}}{8}{subsubsection.2.6.1}%
-\contentsline {subsubsection}{\numberline {2.6.2}Wyszukiwanie plików – Polecenie \texttt {find}}{8}{subsubsection.2.6.2}%
+\contentsline {section}{\numberline {1}Skrypty Bash – Wprowadzenie do automatyzacji}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Tworzenie i edycja skryptu: edytor \texttt {nano}}{4}{subsection.1.1}%
+\contentsline {section}{\numberline {2}System uprawnień plików}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Odczyt uprawnień: Anatomia \texttt {ls -l}}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Zmiana uprawnień: polecenie \texttt {chmod}}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Uruchamianie skryptu}{6}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Monitorowanie i zarządzanie procesami}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Stany procesów}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Interaktywny monitoring: polecenie \texttt {top}}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Wyszukiwanie i zabijanie procesów}{7}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Wyszukiwanie procesów: \texttt {pgrep}}{7}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Zabijanie procesów: sygnały i \texttt {kill}}{7}{subsubsection.3.3.2}%
