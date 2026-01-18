@@ -1,0 +1,60 @@
+\babel@toc {polish}{}\relax 
+\contentsline {section}{Wprowadzenie}{4}{section*.2}%
+\contentsline {section}{\numberline {1}Podstawy teoretyczne: System operacyjny}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Czym jest system operacyjny?}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Serce systemu, czyli jądro (kernel)}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Dwa światy: Linux vs. Windows}{4}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Porównanie jąder systemowych}{4}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Zalety i wady obu systemów}{5}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}Przykłady wykorzystania}{5}{subsubsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.4}Świat Linuksa: Dystrybucje}{5}{subsection.1.4}%
+\contentsline {section}{\numberline {2}Podstawowe komendy w systemie Linux}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Powłoka systemowa: Bash}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Struktura poleceń: opcje i argumenty}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Polecenia informacyjne}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Nawigacja i listowanie plików}{8}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Zarządzanie plikami i katalogami}{8}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Przeglądanie i przetwarzanie plików}{10}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Wyszukiwanie tekstu: polecenie \texttt {grep}}{11}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Wyszukiwanie plików – Polecenie \texttt {find}}{11}{subsubsection.2.6.2}%
+\contentsline {section}{\numberline {3}Skrypty Bash – Wprowadzenie do automatyzacji}{13}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Tworzenie i edycja skryptu: edytor \texttt {nano}}{13}{subsection.3.1}%
+\contentsline {section}{\numberline {4}System uprawnień plików}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Odczyt uprawnień: Anatomia \texttt {ls -l}}{14}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Zmiana uprawnień: polecenie \texttt {chmod}}{14}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Uruchamianie skryptu}{16}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Monitorowanie i zarządzanie procesami}{17}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Stany procesów}{17}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Interaktywny monitoring: polecenie \texttt {top}}{17}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Wyszukiwanie i zabijanie procesów}{17}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Wyszukiwanie procesów: \texttt {pgrep}}{18}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Zabijanie procesów: sygnały i \texttt {kill}}{18}{subsubsection.5.3.2}%
+\contentsline {section}{\numberline {6}Instrukcje Warunkowe oraz Pętle}{20}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Instrukcje warunkowe: \texttt {if}}{20}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Pętle: \texttt {for} i \texttt {while}}{21}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Pętla \texttt {for} -- iteracja po liście elementów}{21}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Pętla \texttt {while} -- wykonywanie do spełnienia warunku}{21}{subsubsection.6.2.2}%
+\contentsline {section}{\numberline {7}Przekazywanie argumentów do skryptu}{22}{section.7}%
+\contentsline {section}{\numberline {8}Przetwarzanie Tekstu i Potoki}{22}{section.8}%
+\contentsline {section}{\numberline {9}Tablice Asocjacyjne}{23}{section.9}%
+\contentsline {section}{\numberline {10}Przetwarzanie Plików: \texttt {find} i \texttt {while read}}{24}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Problem z "trudnymi" nazwami plików}{24}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Rozwiązanie: Połączenie \texttt {find} i \texttt {while read}}{24}{subsection.10.2}%
+\contentsline {section}{\numberline {11}Sumy Kontrolne}{24}{section.11}%
+\contentsline {section}{\numberline {12}Laboratorium: Analiza i Modyfikacja Skryptów}{26}{section.12}%
+\contentsline {section}{\numberline {13}Wprowadzenie do Kontroli Wersji}{29}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Problem: Chaos w plikach}{29}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Rozwiązanie: System Kontroli Wersji (VCS)}{29}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Git: Król Systemów Kontroli Wersji}{29}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4}Dlaczego Git to standard w branży?}{29}{subsection.13.4}%
+\contentsline {section}{\numberline {14}Praca z Gitem: Podstawowe Koncepty i Komendy}{30}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Repozytorium: Twój projekt z superpamięcią}{30}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}Zapisywanie historii: cykl \texttt {add} i \texttt {commit}}{30}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.3}Ignorowanie Plików: plik \texttt {.gitignore}}{30}{subsection.14.3}%
+\contentsline {subsection}{\numberline {14.4}Gałęzie (Branches): Bezpieczne eksperymenty}{31}{subsection.14.4}%
+\contentsline {section}{\numberline {15}Ekosystem Git: GitHub i Dobre Praktyki}{31}{section.15}%
+\contentsline {subsection}{\numberline {15.1}Git vs. GitHub: Narzędzie kontra Platforma}{31}{subsection.15.1}%
+\contentsline {subsection}{\numberline {15.2}Praca ze Zdalnym Repozytorium (GitHub)}{31}{subsection.15.2}%
+\contentsline {subsection}{\numberline {15.3}Anatomia wzorowego repozytorium na GitHubie}{33}{subsection.15.3}%
+\contentsline {subsection}{\numberline {15.4}GUI dla Gita: GitHub Desktop}{33}{subsection.15.4}%
+\contentsline {subsection}{\numberline {15.5}Uwierzytelnianie: Osobisty Token Dostępu (PAT)}{33}{subsection.15.5}%

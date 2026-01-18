@@ -1,0 +1,9 @@
+PWD c:\Users\remik\Desktop\Projekt-zaliczeniowy\latex\script\parts
+INPUT C:\Users\remik\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\Users\remik\Desktop\Projekt-zaliczeniowy\latex\script\parts\lab3.tex
+OUTPUT lab3.log
+INPUT C:\Users\remik\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\remik\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
+OUTPUT lab3.pdf
+INPUT C:\Users\remik\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Users\remik\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm

@@ -1,0 +1,107 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% Konfiguracja marginesów
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+}
+
+% Konfiguracja linków
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\title{\textbf{Instrukcja konfiguracji połączenia zdalnego (VPN + WinSCP)}}
+\author{Maria Junak}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Niniejszy dokument przedstawia procedurę konfiguracji bezpiecznego połączenia z siecią uniwersytecką (Instytut Matematyczny). Instrukcja obejmuje zestawienie tunelu VPN oraz obsługę programu WinSCP w celu przesyłania plików między komputerem lokalnym a serwerem zdalnym.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Konfiguracja i uruchomienie VPN}
+
+Aby uzyskać dostęp do wewnętrznej sieci laboratoriów (adresacja 192.168.x.x), konieczne jest zestawienie tunelu VPN. Bez tego kroku serwery plików są niewidoczne z internetu.
+
+\subsection{Dodawanie połączenia w systemie Windows}
+W ustawieniach sieci VPN należy dodać nową konfigurację dla serwera Instytutu.
+\begin{itemize}
+    \item \textbf{Dostawca:} Windows (wbudowane)
+    \item \textbf{Adres serwera:} \texttt{156.17.86.7}
+    \item \textbf{Typ:} Automatyczny
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{screenshots/vpn_setup.png}
+    \caption{Konfiguracja parametrów połączenia VPN.}
+\end{figure}
+
+\subsection{Nawiązywanie połączenia}
+Po zatwierdzeniu ustawień, należy połączyć się z siecią. Status "Połączono" świadczy o poprawnym zestawieniu tunelu.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{screenshots/vpn_connected.png}
+    \caption{Prawidłowo zestawione, aktywne połączenie VPN.}
+\end{figure}
+
+\newpage
+
+\section{Transfer plików za pomocą WinSCP}
+
+Po uzyskaniu dostępu do sieci wewnętrznej, skonfigurowano klienta SFTP (WinSCP) do zarządzania plikami.
+
+\subsection{Logowanie do serwera}
+W oknie logowania wprowadzono dane dostępowe do konkretnego stanowiska laboratoryjnego:
+\begin{itemize}
+    \item \textbf{Nazwa hosta:} \texttt{192.168.50.144} (lub inny z przydzielonej puli)
+    \item \textbf{Użytkownik i hasło:} Dane konta w pracowni.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{screenshots/winscp_login.png}
+    \caption{Okno logowania programu WinSCP z wybranym protokołem SFTP.}
+\end{figure}
+
+\subsection{Przesyłanie plików}
+Logowanie przebiegło pomyślnie. Interfejs programu został podzielony na dwie sekcje:
+\begin{itemize}
+    \item \textbf{Lewy panel:} Pliki lokalne (Twój komputer).
+    \item \textbf{Prawy panel:} Pliki zdalne (Serwer Instytutu).
+\end{itemize}
+
+Transfer plików odbywa się poprzez przeciągnięcie ikony pliku z jednego panelu do drugiego (metoda \textit{Drag \& Drop}). Poniższy zrzut ekranu prezentuje zalogowanego użytkownika oraz operację przesyłania pliku testowego.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{screenshots/winscp_main.png}
+    \caption{Główne okno WinSCP. Widoczna aktywna sesja użytkownika oraz proces transferu pliku testowego.}
+\end{figure}
+
+\section{Podsumowanie}
+Proces konfiguracji zakończył się sukcesem. Połączenie VPN jest stabilne, a klient WinSCP umożliwia pełny dostęp do zasobów plikowych na koncie studenckim.
+
+\end{document}
