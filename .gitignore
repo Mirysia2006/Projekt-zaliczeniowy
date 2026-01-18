@@ -2,9 +2,6 @@
 *.log
 *.out
 *.synctex.gz
-
-
 .DS_Store
-
 venv/
 env/
