@@ -80,5 +80,5 @@ Gotowe pliki PDF (`instruction.pdf`, `script_wdlk.pdf`) znajdują się w odpowie
 
 ## 👤 Autor
 **Imię i Nazwisko:** Maria Junak
-**Projekt wykonany w ramach przedmiotu:** Wstęp do pracy w systemie Linux
+**Projekt wykonany w ramach przedmiotu:** Wstęp do laboratorium komputerowego
 *Wygenerowano przy wsparciu asystenta AI zgodnie z wymogami zadania.*
