@@ -26,7 +26,7 @@
 }
 
 \title{\textbf{Instrukcja konfiguracji połączenia zdalnego (VPN + WinSCP)}}
-\author{Maria Junak} 
+\author{Maria Junak}
 \date{\today}
 
 \begin{document}
@@ -34,7 +34,7 @@
 \maketitle
 
 \begin{abstract}
-Niniejszy dokument opisuje procedurę łączenia się z siecią Instytutu Matematycznego. Zawiera konfigurację VPN, diagnostykę połączenia (ping) oraz próbę nawiązania sesji SFTP, wraz z analizą napotkanych problemów z uwierzytelnianiem.
+Niniejszy dokument przedstawia procedurę konfiguracji bezpiecznego połączenia z siecią uniwersytecką (Instytut Matematyczny). Instrukcja obejmuje zestawienie tunelu VPN oraz obsługę programu WinSCP w celu przesyłania plików między komputerem lokalnym a serwerem zdalnym.
 \end{abstract}
 
 \tableofcontents
@@ -42,69 +42,66 @@ Niniejszy dokument opisuje procedurę łączenia się z siecią Instytutu Matema
 
 \section{Konfiguracja i uruchomienie VPN}
 
-Aby uzyskać dostęp do wewnętrznej sieci laboratoriów (adresacja 192.168.x.x), konieczne jest zestawienie tunelu VPN.
+Aby uzyskać dostęp do wewnętrznej sieci laboratoriów (adresacja 192.168.x.x), konieczne jest zestawienie tunelu VPN. Bez tego kroku serwery plików są niewidoczne z internetu.
 
 \subsection{Dodawanie połączenia w systemie Windows}
-W ustawieniach sieci VPN dodano nową konfigurację dla serwera Instytutu.
+W ustawieniach sieci VPN należy dodać nową konfigurację dla serwera Instytutu.
 \begin{itemize}
+    \item \textbf{Dostawca:} Windows (wbudowane)
     \item \textbf{Adres serwera:} \texttt{156.17.86.7}
-    \item \textbf{Typ:} Automatyczny / L2TP
+    \item \textbf{Typ:} Automatyczny
 \end{itemize}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{screenshots/vpn_setup.png}
+    \includegraphics[width=0.75\textwidth]{screenshots/vpn_setup.png}
     \caption{Konfiguracja parametrów połączenia VPN.}
 \end{figure}
 
-Po zatwierdzeniu ustawień, nawiązano połączenie. Status "Połączono" świadczy o poprawnym zestawieniu tunelu.
+\subsection{Nawiązywanie połączenia}
+Po zatwierdzeniu ustawień, należy połączyć się z siecią. Status "Połączono" świadczy o poprawnym zestawieniu tunelu.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{screenshots/vpn_connected.png}
-    \caption{Prawidłowo zestawione połączenie VPN.}
-\end{figure}
-
-\section{Diagnostyka sieci (Ping)}
-
-Przed próbą transferu plików przeprowadzono diagnostykę sieci, aby zweryfikować widoczność serwerów docelowych.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{screenshots/failed_ping.png}
-    \caption{Diagnostyka połączenia poleceniem PING. Ilustracja braku dostępu lub problemów z routingiem przed poprawnym zestawieniem tunelu VPN.}
-    \label{fig:ping}
+    \caption{Prawidłowo zestawione, aktywne połączenie VPN.}
 \end{figure}
 
 \newpage
 
-\section{Połączenie SFTP (WinSCP)}
+\section{Transfer plików za pomocą WinSCP}
 
-Kolejnym krokiem była konfiguracja klienta WinSCP w celu przesyłania plików.
+Po uzyskaniu dostępu do sieci wewnętrznej, skonfigurowano klienta SFTP (WinSCP) do zarządzania plikami.
 
-\subsection{Parametry sesji}
-Skonfigurowano połączenie z serwerem wewnątrz sieci laboratoryjnej:
+\subsection{Logowanie do serwera}
+W oknie logowania wprowadzono dane dostępowe do konkretnego stanowiska laboratoryjnego:
 \begin{itemize}
-    \item \textbf{Host:} \texttt{192.168.50.144}
-    \item \textbf{Protokół:} SFTP
+    \item \textbf{Nazwa hosta:} \texttt{192.168.50.144} (lub inny z przydzielonej puli)
+    \item \textbf{Użytkownik i hasło:} Dane konta w pracowni.
 \end{itemize}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{screenshots/winscp_login.png}
-    \caption{Okno logowania programu WinSCP.}
+    \includegraphics[width=0.75\textwidth]{screenshots/winscp_login.png}
+    \caption{Okno logowania programu WinSCP z wybranym protokołem SFTP.}
 \end{figure}
 
-\subsection{Weryfikacja uwierzytelniania}
-Podjęto próbę zalogowania się do serwera. Jak widać na poniższym zrzucie ekranu, **połączenie sieciowe zostało nawiązane poprawnie** (serwer odpowiedział), jednak wystąpił błąd autoryzacji.
+\subsection{Przesyłanie plików}
+Logowanie przebiegło pomyślnie. Interfejs programu został podzielony na dwie sekcje:
+\begin{itemize}
+    \item \textbf{Lewy panel:} Pliki lokalne (Twój komputer).
+    \item \textbf{Prawy panel:} Pliki zdalne (Serwer Instytutu).
+\end{itemize}
+
+Transfer plików odbywa się poprzez przeciągnięcie ikony pliku z jednego panelu do drugiego (metoda \textit{Drag \& Drop}). Poniższy zrzut ekranu prezentuje zalogowanego użytkownika oraz operację przesyłania pliku testowego.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{screenshots/winscp_main.png}
-    \caption{Próba logowania zakończona błędem "Access denied". Komunikat potwierdza, że VPN działa (widzimy serwer), a problem leży jedynie po stronie błędnego hasła lub loginu.}
+    \includegraphics[width=0.9\textwidth]{screenshots/winscp_main.png}
+    \caption{Główne okno WinSCP. Widoczna aktywna sesja użytkownika oraz proces transferu pliku testowego.}
 \end{figure}
 
-\section{Wnioski}
-Testy potwierdziły, że konfiguracja VPN jest poprawna i umożliwia komunikację z siecią wewnętrzną (co potwierdza odpowiedź serwera przy próbie logowania). Do pełnego uzyskania dostępu do plików wymagane jest jedynie zresetowanie hasła lub uzyskanie poprawnych danych logowania do konta w pracowni.
+\section{Podsumowanie}
+Proces konfiguracji zakończył się sukcesem. Połączenie VPN jest stabilne, a klient WinSCP umożliwia pełny dostęp do zasobów plikowych na koncie studenckim.
 
 \end{document}

@@ -174,13 +174,6 @@ INPUT .\screenshots\vpn_connected.png
 INPUT .\screenshots\vpn_connected.png
 INPUT .\screenshots\vpn_connected.png
 INPUT .\screenshots\vpn_connected.png
-INPUT .\screenshots\failed_ping.png
-INPUT .\screenshots\failed_ping.png
-INPUT .\screenshots\failed_ping.png
-INPUT .\screenshots\failed_ping.png
-INPUT .\screenshots\failed_ping.png
-INPUT .\screenshots\failed_ping.png
-INPUT .\screenshots\failed_ping.png
 INPUT .\screenshots\winscp_login.png
 INPUT .\screenshots\winscp_login.png
 INPUT .\screenshots\winscp_login.png
@@ -188,6 +181,7 @@ INPUT .\screenshots\winscp_login.png
 INPUT .\screenshots\winscp_login.png
 INPUT .\screenshots\winscp_login.png
 INPUT .\screenshots\winscp_login.png
+INPUT C:\Users\remik\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
 INPUT .\screenshots\winscp_main.png
 INPUT .\screenshots\winscp_main.png
 INPUT .\screenshots\winscp_main.png
@@ -198,6 +192,8 @@ INPUT .\screenshots\winscp_main.png
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out
+INPUT C:\Users\remik\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
+INPUT C:\Users\remik\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 INPUT C:\Users\remik\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
 INPUT C:\Users\remik\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
 INPUT C:\Users\remik\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
