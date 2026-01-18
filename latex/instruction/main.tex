@@ -1,0 +1,110 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% Konfiguracja marginesów
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+}
+
+% Konfiguracja linków
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\title{\textbf{Instrukcja konfiguracji połączenia zdalnego (VPN + WinSCP)}}
+\author{Maria Junak} 
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Niniejszy dokument opisuje procedurę łączenia się z siecią Instytutu Matematycznego. Zawiera konfigurację VPN, diagnostykę połączenia (ping) oraz próbę nawiązania sesji SFTP, wraz z analizą napotkanych problemów z uwierzytelnianiem.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Konfiguracja i uruchomienie VPN}
+
+Aby uzyskać dostęp do wewnętrznej sieci laboratoriów (adresacja 192.168.x.x), konieczne jest zestawienie tunelu VPN.
+
+\subsection{Dodawanie połączenia w systemie Windows}
+W ustawieniach sieci VPN dodano nową konfigurację dla serwera Instytutu.
+\begin{itemize}
+    \item \textbf{Adres serwera:} \texttt{156.17.86.7}
+    \item \textbf{Typ:} Automatyczny / L2TP
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{screenshots/vpn_setup.png}
+    \caption{Konfiguracja parametrów połączenia VPN.}
+\end{figure}
+
+Po zatwierdzeniu ustawień, nawiązano połączenie. Status "Połączono" świadczy o poprawnym zestawieniu tunelu.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{screenshots/vpn_connected.png}
+    \caption{Prawidłowo zestawione połączenie VPN.}
+\end{figure}
+
+\section{Diagnostyka sieci (Ping)}
+
+Przed próbą transferu plików przeprowadzono diagnostykę sieci, aby zweryfikować widoczność serwerów docelowych.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{screenshots/failed_ping.png}
+    \caption{Diagnostyka połączenia poleceniem PING. Ilustracja braku dostępu lub problemów z routingiem przed poprawnym zestawieniem tunelu VPN.}
+    \label{fig:ping}
+\end{figure}
+
+\newpage
+
+\section{Połączenie SFTP (WinSCP)}
+
+Kolejnym krokiem była konfiguracja klienta WinSCP w celu przesyłania plików.
+
+\subsection{Parametry sesji}
+Skonfigurowano połączenie z serwerem wewnątrz sieci laboratoryjnej:
+\begin{itemize}
+    \item \textbf{Host:} \texttt{192.168.50.144}
+    \item \textbf{Protokół:} SFTP
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{screenshots/winscp_login.png}
+    \caption{Okno logowania programu WinSCP.}
+\end{figure}
+
+\subsection{Weryfikacja uwierzytelniania}
+Podjęto próbę zalogowania się do serwera. Jak widać na poniższym zrzucie ekranu, **połączenie sieciowe zostało nawiązane poprawnie** (serwer odpowiedział), jednak wystąpił błąd autoryzacji.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{screenshots/winscp_main.png}
+    \caption{Próba logowania zakończona błędem "Access denied". Komunikat potwierdza, że VPN działa (widzimy serwer), a problem leży jedynie po stronie błędnego hasła lub loginu.}
+\end{figure}
+
+\section{Wnioski}
+Testy potwierdziły, że konfiguracja VPN jest poprawna i umożliwia komunikację z siecią wewnętrzną (co potwierdza odpowiedź serwera przy próbie logowania). Do pełnego uzyskania dostępu do plików wymagane jest jedynie zresetowanie hasła lub uzyskanie poprawnych danych logowania do konta w pracowni.
+
+\end{document}

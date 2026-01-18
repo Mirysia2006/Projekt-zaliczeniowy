@@ -1,0 +1,8 @@
+\babel@toc {polish}{}\relax 
+\contentsline {section}{\numberline {1}Konfiguracja i uruchomienie VPN}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Dodawanie połączenia w systemie Windows}{2}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Diagnostyka sieci (Ping)}{4}{section.2}%
+\contentsline {section}{\numberline {3}Połączenie SFTP (WinSCP)}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Parametry sesji}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Weryfikacja uwierzytelniania}{5}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Wnioski}{6}{section.4}%
