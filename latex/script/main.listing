@@ -1,0 +1,2 @@
+# Pobierz i połącz najnowsze zmiany z gałęzi `main` na serwerze
+$ git pull origin main
